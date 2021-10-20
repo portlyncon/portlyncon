@@ -17,5 +17,8 @@ public class exercici1 {
         } else {
             System.out.println("NO es par");
         }
+
+        sc.close();
     }
+
 }

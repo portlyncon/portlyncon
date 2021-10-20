@@ -21,7 +21,7 @@ public class exercici2 {
             }
 
         }
-
+        sc.close();
     }
 
 }
