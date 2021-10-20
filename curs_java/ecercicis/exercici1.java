@@ -9,5 +9,13 @@ public class exercici1 {
 
         Scanner sc = new Scanner(System.in);
 
+        int num = sc.nextInt();
+        boolean esPAr = (num & 1) == 0;
+
+        if (esPAr) {
+            System.out.println("es par");
+        } else {
+            System.out.println("NO es par");
+        }
     }
 }
