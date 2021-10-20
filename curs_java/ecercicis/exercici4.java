@@ -6,7 +6,7 @@ public class exercici4 {
 
     public static void main(String arg[]) {
 
-        System.out.println("INTRODUCE UN NUMERO: ");
+        System.out.println("Introduce 10 numeros: ");
 
         Scanner sc = new Scanner(System.in);
 
