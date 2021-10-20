@@ -14,11 +14,12 @@ public class exercici3 {
             Integer limite = sc.nextInt();
 
             if (limite <= 1) {
-                throw new Exception("Out of limit");
+                throw new Exception("introduce un valor  mayor que 0");
             }
 
             for (int i = 2; i < limite; i++) {
                 Boolean esPrimo = true;
+                // calcular raiz quadrada para saber sis es primo
                 for (int d = 2; d <= (int) Math.sqrt(i); d++) {
                     if (i % d == 0) {
                         esPrimo = false;
