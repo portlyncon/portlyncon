@@ -1,0 +1,176 @@
+## **************************************************************
+## User Case 1: Adding Artists
+## **************************************************************
+##  addIndividualArtist(artistCode, name, birthYear, deceaseYear)
+##  addGroup(artistCode, name, CreatedYear)
+##  listArtists()
+## COMMAND ##: addIndividualArtist(101,Bruce Springsteen,1949,-)
+## COMMAND ##: addIndividualArtist(102,Frank Sinatra,1943,-)
+## COMMAND ##: addGroup(106, REM, 1980)
+## COMMAND ##: addIndividualArtist(103,Federic Chopin, 1810, 1849)
+## COMMAND ##: addIndividualArtist(104, Murray Perahia, 1947, -) 
+## COMMAND ##: addGroup(107, SexPistols, 1975) 
+## COMMAND ##: addIndividualArtist(105, Zubin Metha, 1936,-) 
+## COMMAND ##: listArtists()
+IndividualArtist List
+artist code: 101  name: Bruce SpringsteenbirthYear: 1949deceaseYear: Still Alive
+artist code: 102  name: Frank SinatrabirthYear: 1943deceaseYear: Still Alive
+artist code: 103  name: Federic ChopinbirthYear: 1810deceaseYear: Still Alive
+artist code: 104  name: Murray PerahiabirthYear: 1947deceaseYear: Still Alive
+artist code: 105  name: Zubin MethabirthYear: 1936deceaseYear: Still Alive
+
+GroupList
+artist code: 106  name: REMyearStarted :1980
+artist code: 107  name: SexPistolsyearStarted :1975
+
+
+## ERROR test: add an existing artist
+## COMMAND ##: addIndividualArtist(101,Bruce Springsteen,1949,-)
+ERROR: ARTIST is already inserted.
+
+
+## **************************************************************
+## User Case 2: Adding MusicalPiece
+## **************************************************************
+## addMusicalPiece(musicCode, name , artistCode ...)
+## listMusicalPieces()
+## COMMAND ##: addMusicalPiece(201,The River,101)
+## COMMAND ##: addMusicalPiece(202,Berceuse in Db Major Opus 57, 103)
+## COMMAND ##: listMusicalPieces()
+List of MusicalPieces
+name : The River Unique Composer
+artist code: 101  name: Bruce SpringsteenbirthYear: 1949deceaseYear: Still Alive
+name : Berceuse in Db Major Opus 57 Unique Composer
+artist code: 103  name: Federic ChopinbirthYear: 1810deceaseYear: Still Alive
+
+
+
+## ERROR test: add existing musicalPiece, non existing artist.
+## COMMAND ##: addMusicalPiece(201,The River,101)
+ERROR: MUSICAL PIECE is already inserted.
+## COMMAND ##: addMusicalPiece(500,New York New York,999)
+ERROR: ARTIST doesn't exist.
+
+
+## **************************************************************
+## User Case 3: Adding AudioClip 
+## **************************************************************
+## addAudioClip(audioClipId, musicCode,duration, price,artistCode ...)  
+## listAudioClips()
+## COMMAND ##: addAudioClip(AC01,202,134,0.00,104)
+## COMMAND ##: addAudioClip(AC02,202,146,20.00,104,105)
+## COMMAND ##: addAudioClip(AC03,201,212,5.00,101)
+
+## COMMAND ##: listAudioClips()
+List of  AudioClips
+name MusicalPiece: Berceuse in Db Major Opus 57 duration:  134 Unique Interpreter:
+artist code: 104  name: Murray PerahiabirthYear: 1947deceaseYear: Still Alive
+MusicPiece NonFreeOfCharge price: 20.0 name MusicalPiece: Berceuse in Db Major Opus 57 duration:  146 List of Interpreters:
+artist code: 104  name: Murray PerahiabirthYear: 1947deceaseYear: Still Aliveartist code: 105  name: Zubin MethabirthYear: 1936deceaseYear: Still Alive
+MusicPiece NonFreeOfCharge price: 5.0 name MusicalPiece: The River duration:  212 Unique Interpreter:
+artist code: 101  name: Bruce SpringsteenbirthYear: 1949deceaseYear: Still Alive
+
+
+## ERROR test: add existing audioClip, non existing artist
+## COMMAND ##: addAudioClip(AC02,202,146,20.00,104,105)
+ERROR: AUDIO CLIP is already added to User.
+## COMMAND ##: addAudioClip(AC02,202,146,20.00,104,105,1234)
+ERROR: ARTIST doesn't exist.
+
+
+## **************************************************************
+## User Case 4: Adding Artist in the FavoriteList of a user
+## **************************************************************
+## addUser(userId, name)
+## addArtistToFavouriteList(userId, artistCode)
+## listFavoritesArtistByUserId(userId)
+
+## COMMAND ##: addUser(User01, Ramon García)
+## COMMAND ##: addArtistToFavouriteList(User01, 101)
+## COMMAND ##: addArtistToFavouriteList(User01, 102)
+## COMMAND ##: listFavoritesArtistByUserId(User01)
+name:Ramon GarcíaThe favourite artist of the user
+artist code: 101  name: Bruce SpringsteenbirthYear: 1949deceaseYear: Still Alive
+artist code: 102  name: Frank SinatrabirthYear: 1943deceaseYear: Still Alive
+
+
+## ERROR test: add existing User, non existing user.
+## COMMAND ##: addUser(User01, Ramon Gómez)
+ERROR: USER is already inserted.
+## COMMAND ##: addArtistToFavouriteList(User500, 101)
+ERROR: USER doesn't exist.
+
+## **************************************************************
+## User Case 5: Adding AudioClip in the PersonalCollection of a User
+## **************************************************************
+## addUser(userId, name)
+## addAudioClipToPersonalCollection(userId, audioClipId)
+## listCollectionByUserId(userId)
+## purchaseAudioClip(audioClipId, userId)
+
+## COMMAND ##: addUser(User02, César Jimenez)
+## COMMAND ##: addAudioClipToPersonalCollection(User02, AC02)
+
+
+
+
+
+## COMMAND ##: listPersonalCollectionByUser(User02)
+name : César Jimenezaudioclip of de personal collection
+MusicPiece NonFreeOfCharge price: 20.0 name MusicalPiece: Berceuse in Db Major Opus 57 duration:  146 List of Interpreters:
+artist code: 104  name: Murray PerahiabirthYear: 1947deceaseYear: Still Aliveartist code: 105  name: Zubin MethabirthYear: 1936deceaseYear: Still Alive
+
+## COMMAND ##: purchaseAudioClip(AC02,User02)
+
+## ERROR test: the audio is already free.
+## COMMAND ##: purchaseAudioClip(AC01,User02)
+ERROR : AUDIO CLIP is already free of charge.
+## ERROR test: the audio is already added
+## COMMAND ##: addAudioClipToPersonalCollection(User02, AC02)
+ERROR: AUDIO CLIP is already added to User.
+
+## **************************************************************
+## User Case 6: Link MusicalPiece To Category
+## **************************************************************
+## addCategory(categoryId, name, categoryDependency)
+## listCategories()
+## linkPieceToCategory(musicCode, categoryId)
+## COMMAND ##: addCategory(301, Rock, -)
+## COMMAND ##: addCategory(302, Pop Rock, 301)
+## COMMAND ##: listCategories()
+List of  Categories
+name: Rock
+Dependents:Pop Rock
+
+name: Pop Rock
+
+
+## COMMAND ##: linkPieceToCategory(202,301)
+## COMMAND ##: linkPieceToCategory(201,301)
+
+## ERROR test: the music does not exists.
+## COMMAND ##: linkPieceToCategory(234234,301)
+ERROR: MUSICAL PIECE doesn't exist.
+
+## **************************************************************
+## User Case 7: Rate the AudioClip 
+## **************************************************************
+## rateAudioClip(audioClipId, userId, rate)
+## COMMAND ##: rateAudioClip(AC01, User01, 8)
+## COMMAND ##: rateAudioClip(AC02, User02, 6)
+## COMMAND ##: rateAudioClip(AC03, User02, 9)
+
+
+## ERROR test: the user has already evaluated the audioclip
+## COMMAND ##: rateAudioClip(AC01, User01, 8)
+ERROR: User has already evaluated the audioclip.
+
+## **************************************************************
+## User Case 8: List Ordered By Rate the MusicalPieces of a specfic Category
+## **************************************************************
+## listOrderedMusicalPiecesByCategory(categoryId)
+## COMMAND ##: listOrderedMusicalPiecesByCategory(301)
+List of Musical Pieces
+The River - 9.0
+Berceuse in Db Major Opus 57 - 7.0
+

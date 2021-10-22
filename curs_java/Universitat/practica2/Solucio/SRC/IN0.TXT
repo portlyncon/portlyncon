@@ -1,0 +1,120 @@
+## **************************************************************
+## User Case 1: Adding Artists
+## **************************************************************
+##  addIndividualArtist(artistCode, name, birthYear, deceaseYear)
+##  addGroup(artistCode, name, CreatedYear)
+##  listArtists()
+addIndividualArtist(101,Bruce Springsteen,1949,-)
+addIndividualArtist(102,Frank Sinatra,1943,-)
+addGroup(106, REM, 1980)
+addIndividualArtist(103,Federic Chopin, 1810, 1849)
+addIndividualArtist(104, Murray Perahia, 1947, -) 
+addGroup(107, SexPistols, 1975) 
+addIndividualArtist(105, Zubin Metha, 1936,-) 
+listArtists()
+
+## ERROR test: add an existing artist
+addIndividualArtist(101,Bruce Springsteen,1949,-)
+
+
+## **************************************************************
+## User Case 2: Adding MusicalPiece
+## **************************************************************
+## addMusicalPiece(musicCode, name , artistCode ...)
+## listMusicalPieces()
+addMusicalPiece(201,The River,101)
+addMusicalPiece(202,Berceuse in Db Major Opus 57, 103)
+listMusicalPieces()
+
+## ERROR test: add existing musicalPiece, non existing artist.
+addMusicalPiece(201,The River,101)
+addMusicalPiece(500,New York New York,999)
+
+
+## **************************************************************
+## User Case 3: Adding AudioClip 
+## **************************************************************
+## addAudioClip(audioClipId, musicCode,duration, price,artistCode ...)  
+## listAudioClips()
+addAudioClip(AC01,202,134,0.00,104)
+addAudioClip(AC02,202,146,20.00,104,105)
+addAudioClip(AC03,201,212,5.00,101)
+
+listAudioClips()
+
+## ERROR test: add existing audioClip, non existing artist
+addAudioClip(AC02,202,146,20.00,104,105)
+addAudioClip(AC02,202,146,20.00,104,105,1234)
+
+
+## **************************************************************
+## User Case 4: Adding Artist in the FavoriteList of a user
+## **************************************************************
+## addUser(userId, name)
+## addArtistToFavouriteList(userId, artistCode)
+## listFavoritesArtistByUserId(userId)
+
+addUser(User01, Ramon García)
+addArtistToFavouriteList(User01, 101)
+addArtistToFavouriteList(User01, 102)
+listFavoritesArtistByUserId(User01)
+
+## ERROR test: add existing User, non existing user.
+addUser(User01, Ramon Gómez)
+addArtistToFavouriteList(User500, 101)
+
+## **************************************************************
+## User Case 5: Adding AudioClip in the PersonalCollection of a User
+## **************************************************************
+## addUser(userId, name)
+## addAudioClipToPersonalCollection(userId, audioClipId)
+## listCollectionByUserId(userId)
+## purchaseAudioClip(audioClipId, userId)
+
+addUser(User02, César Jimenez)
+addAudioClipToPersonalCollection(User02, AC02)
+
+
+
+
+
+listPersonalCollectionByUser(User02)
+purchaseAudioClip(AC02,User02)
+
+## ERROR test: the audio is already free.
+purchaseAudioClip(AC01,User02)
+## ERROR test: the audio is already added
+addAudioClipToPersonalCollection(User02, AC02)
+
+## **************************************************************
+## User Case 6: Link MusicalPiece To Category
+## **************************************************************
+## addCategory(categoryId, name, categoryDependency)
+## listCategories()
+## linkPieceToCategory(musicCode, categoryId)
+addCategory(301, Rock, -)
+addCategory(302, Pop Rock, 301)
+listCategories()
+linkPieceToCategory(202,301)
+linkPieceToCategory(201,301)
+
+## ERROR test: the music does not exists.
+linkPieceToCategory(234234,301)
+
+## **************************************************************
+## User Case 7: Rate the AudioClip 
+## **************************************************************
+## rateAudioClip(audioClipId, userId, rate)
+rateAudioClip(AC01, User01, 8)
+rateAudioClip(AC02, User02, 6)
+rateAudioClip(AC03, User02, 9)
+
+
+## ERROR test: the user has already evaluated the audioclip
+rateAudioClip(AC01, User01, 8)
+
+## **************************************************************
+## User Case 8: List Ordered By Rate the MusicalPieces of a specfic Category
+## **************************************************************
+## listOrderedMusicalPiecesByCategory(categoryId)
+listOrderedMusicalPiecesByCategory(301)
