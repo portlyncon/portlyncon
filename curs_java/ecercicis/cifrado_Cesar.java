@@ -23,13 +23,13 @@ public class cifrado_Cesar {
         // introduir la opcio del desitjada
         do {
             sc.nextLine();
-            System.out.print("(C) cifrar  (D) descifrar  o (E)salir: ?");
+            System.out.print("(X) xifrar  (D) desxifrar  o (S)sortir: ?");
             opcion = (char) System.in.read();
-            if (Character.toUpperCase(opcion) == 'E') {
+            if (Character.toUpperCase(opcion) == 'S') {
                 System.exit(0);
             }
-        } while (Character.toUpperCase(opcion) != 'C' && Character.toUpperCase(opcion) != 'D');
-        if (Character.toUpperCase(opcion) == 'C') {
+        } while (Character.toUpperCase(opcion) != 'X' && Character.toUpperCase(opcion) != 'D');
+        if (Character.toUpperCase(opcion) == 'X') {
             System.out.println("Texto cifrado: " + cifradoCesar(texto, codigo));
         } else {
             System.out.println("Texto descifrado: " + descifradoCesar(texto, codigo));
@@ -43,7 +43,7 @@ public class cifrado_Cesar {
         StringBuilder cifrado = new StringBuilder();
         codigo = codigo % 26;
         for (int i = 0; i < texto.length(); i++) {
-
+            // encara que no fa falta per saber com a apunts els codis ascii
             if (texto.charAt(i) >= 32 && texto.charAt(i) <= 47 || texto.charAt(i) >= 58 && texto.charAt(i) <= 64
                     || texto.charAt(i) >= 91 && texto.charAt(i) <= 96
                     || texto.charAt(i) >= 123 && texto.charAt(i) <= 126) {
@@ -65,7 +65,7 @@ public class cifrado_Cesar {
                     }
                 } else if (texto.charAt(i) >= '0' && texto.charAt(i) <= '9') {
                     if ((texto.charAt(i) + codigo) > '9') {
-                        cifrado.append((char) (texto.charAt(i) + codigo - 26));
+                        cifrado.append((char) (texto.charAt(i) + codigo - 10));
                     } else {
                         cifrado.append((char) (texto.charAt(i) + codigo));
 
@@ -102,7 +102,7 @@ public class cifrado_Cesar {
                     }
                 } else if (texto.charAt(i) >= '0' && texto.charAt(i) <= '9') {
                     if ((texto.charAt(i) - codigo) < '0') {
-                        descifrado.append((char) (texto.charAt(i) - codigo + 26));
+                        descifrado.append((char) (texto.charAt(i) - codigo + 10));
                     } else {
                         descifrado.append((char) (texto.charAt(i) - codigo));
                     }
