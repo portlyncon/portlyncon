@@ -39,6 +39,7 @@ public class cifrado_Cesar {
 
     // metode per xifra el text
     public static String cifradoCesar(String texto, int codigo) {
+        // utilitzem StringBuilder pq es mes rapid que StringBuffer
         StringBuilder cifrado = new StringBuilder();
         codigo = codigo % 26;
         for (int i = 0; i < texto.length(); i++) {
@@ -79,36 +80,36 @@ public class cifrado_Cesar {
 
     // metode per desxifrar el text
     public static String descifradoCesar(String texto, int codigo) {
-        StringBuilder cifrado = new StringBuilder();
+        StringBuilder descifrado = new StringBuilder();
         codigo = codigo % 26;
         for (int i = 0; i < texto.length(); i++) {
             if (texto.charAt(i) >= 32 && texto.charAt(i) <= 47 || texto.charAt(i) >= 58 && texto.charAt(i) <= 64
                     || texto.charAt(i) >= 91 && texto.charAt(i) <= 96
                     || texto.charAt(i) >= 123 && texto.charAt(i) <= 126) {
-                cifrado.append((char) (texto.charAt(i)));
+                descifrado.append((char) (texto.charAt(i)));
             } else {
                 if (texto.charAt(i) >= 'a' && texto.charAt(i) <= 'z') {
                     if ((texto.charAt(i) - codigo) < 'a') {
-                        cifrado.append((char) (texto.charAt(i) - codigo + 26));
+                        descifrado.append((char) (texto.charAt(i) - codigo + 26));
                     } else {
-                        cifrado.append((char) (texto.charAt(i) - codigo));
+                        descifrado.append((char) (texto.charAt(i) - codigo));
                     }
                 } else if (texto.charAt(i) >= 'A' && texto.charAt(i) <= 'Z') {
                     if ((texto.charAt(i) - codigo) < 'A') {
-                        cifrado.append((char) (texto.charAt(i) - codigo + 26));
+                        descifrado.append((char) (texto.charAt(i) - codigo + 26));
                     } else {
-                        cifrado.append((char) (texto.charAt(i) - codigo));
+                        descifrado.append((char) (texto.charAt(i) - codigo));
                     }
                 } else if (texto.charAt(i) >= '0' && texto.charAt(i) <= '9') {
                     if ((texto.charAt(i) - codigo) < '0') {
-                        cifrado.append((char) (texto.charAt(i) - codigo + 26));
+                        descifrado.append((char) (texto.charAt(i) - codigo + 26));
                     } else {
-                        cifrado.append((char) (texto.charAt(i) - codigo));
+                        descifrado.append((char) (texto.charAt(i) - codigo));
                     }
                 }
             }
         }
-        return cifrado.toString();
+        return descifrado.toString();
 
     }
 
