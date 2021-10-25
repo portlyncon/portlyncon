@@ -47,7 +47,7 @@ public class exercici6 {
         // mostrar resultados
         System.out.println("Empleado con mayor sueldo: " + nombreMayor);
         System.out.println("Sueldo: " + mayorSueldo);
-
+        sc.close();
     }
 
 }
