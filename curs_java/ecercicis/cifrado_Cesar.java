@@ -12,18 +12,18 @@ public class cifrado_Cesar {
         char opcion;
 
         do {
-            System.out.print("Introduce un texto: ");
+            System.out.print("Introdueix un texte: ");
             texto = sc.nextLine();
         } while (texto.isEmpty());
 
         do {
-            System.out.print("Introduce el valor de desplazamineto: ");
+            System.out.print("Introduex un valor de desplaçament: ");
             codigo = sc.nextInt();
         } while (codigo < 1);
         // introduir la opcio del desitjada
         do {
             sc.nextLine();
-            System.out.print("(C) cifrar o (D) descifrar? (E)salir: ");
+            System.out.print("(C) cifrar  (D) descifrar  o (E)salir: ?");
             opcion = (char) System.in.read();
             if (Character.toUpperCase(opcion) == 'E') {
                 System.exit(0);
