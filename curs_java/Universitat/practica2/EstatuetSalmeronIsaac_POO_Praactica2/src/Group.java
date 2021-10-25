@@ -1,3 +1,5 @@
+package curs_java.Universitat.practica2.EstatuetSalmeronIsaac_POO_Praactica2.src;
+
 /*
  * Group.java
  *
@@ -11,42 +13,48 @@
  *
  * @author srpopo
  */
-/** classe Group, declarem les variables necessaries per la classe
+/**
+ * classe Group, declarem les variables necessaries per la classe
  */
 
 public class Group extends Artist {
-    
+
     public int yearStarted;
-    
-    
-    /** Metode constructor de la classe, inicialitzem la variable yearStarted i cridem al metode constructor de la superclasse
+
+    /**
+     * Metode constructor de la classe, inicialitzem la variable yearStarted i
+     * cridem al metode constructor de la superclasse
      */
-    
-    public Group(int code, String name, int yearStarted){
-        
+
+    public Group(int code, String name, int yearStarted) {
+
         super(code, name);
         this.yearStarted = yearStarted;
     }
-    
-    /** Metode que retorna yearStared en un int
+
+    /**
+     * Metode que retorna yearStared en un int
      */
-    
-    public int getYearStarted(){
+
+    public int getYearStarted() {
         return this.yearStarted;
     }
-    
-    /** Metode que estableix el yearStarted
+
+    /**
+     * Metode que estableix el yearStarted
      */
-    
-    public void setYearStarted( int yearStarted){
+
+    public void setYearStarted(int yearStarted) {
         this.yearStarted = yearStarted;
     }
-    
-    /** Metode toString per retornar un String amb les caracteristiques necessaries requerides per l'enunciat de la practica
-     *   fa una crida al metode toString de la superclasse
+
+    /**
+     * Metode toString per retornar un String amb les caracteristiques necessaries
+     * requerides per l'enunciat de la practica fa una crida al metode toString de
+     * la superclasse
      */
-    
-    public String toString(){
-        return(super.toString() + "yearStarted :" + this.yearStarted);
+
+    public String toString() {
+        return (super.toString() + "yearStarted :" + this.yearStarted);
     }
 }

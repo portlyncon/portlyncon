@@ -1,3 +1,5 @@
+package curs_java.Universitat.practica2.EstatuetSalmeronIsaac_POO_Praactica2.src;
+
 /*
  * User.java
  *
@@ -14,148 +16,162 @@ import java.util.List;
  * @author srpopo
  */
 
-/** classe User, declarem les variables necessaries per la classe
+/**
+ * classe User, declarem les variables necessaries per la classe
  */
 
 public class User {
-    
+
     public String userID;
     public String name;
     public List<AudioClip> audioclips;
     public List<Artist> favorits;
     public List<Rating> ratings;
     public List<NonFreeAudioClip> nonfreeaudioclips;
-    
-    /** Metode constructor de la classe, inicialitzem les variables userID, name, audioclips, favorits, ratings, nonfreeaudioclips
+
+    /**
+     * Metode constructor de la classe, inicialitzem les variables userID, name,
+     * audioclips, favorits, ratings, nonfreeaudioclips
      */
-    
-    public User(String userId,String name) {
-        
+
+    public User(String userId, String name) {
+
         this.userID = userId;
-        this.name =  name;
+        this.name = name;
         this.audioclips = new ArrayList<AudioClip>();
         this.favorits = new ArrayList<Artist>();
         this.ratings = new ArrayList<Rating>();
         this.nonfreeaudioclips = new ArrayList<NonFreeAudioClip>();
     }
-    
-    /** Metode per afeguir un Audiclip, si l'Audioclip ja s'ha afeguit llancem una UltimaFMException
+
+    /**
+     * Metode per afeguir un Audiclip, si l'Audioclip ja s'ha afeguit llancem una
+     * UltimaFMException
      */
-    
-    public void addAudioClip(AudioClip audioclip)  throws UltimaFMException {
-        
-        if(!audioclips.contains(audioclip)){
+
+    public void addAudioClip(AudioClip audioclip) throws UltimaFMException {
+
+        if (!audioclips.contains(audioclip)) {
             audioclips.add(audioclip);
-            
-        }else
+
+        } else
             throw new UltimaFMException(UltimaFMException.AUDIO_CLIP_ALREADY_ADDED);
     }
-    
-    /** Metode per afeguir un Artista favorit, si ja s'ha afeguit llencem una UltimaFMException
+
+    /**
+     * Metode per afeguir un Artista favorit, si ja s'ha afeguit llencem una
+     * UltimaFMException
      */
-    
+
     public void addFavorite(Artist artist) throws UltimaFMException {
-        
-        if(!favorits.contains(artist)){
+
+        if (!favorits.contains(artist)) {
             favorits.add(artist);
-            
-        }else
+
+        } else
             throw new UltimaFMException(UltimaFMException.FAVORITE_ALREADY_ADDED);
     }
-    
-    /** Metode per afeguir una votacio
+
+    /**
+     * Metode per afeguir una votacio
      */
-    
-    public void addRate(AudioClip audioclip , int value){
-        
+
+    public void addRate(AudioClip audioclip, int value) {
+
     }
-    
-    /** Metode per evaluar si dos objectes de la classe son iguals, si ho son retornem un true si no un false
+
+    /**
+     * Metode per evaluar si dos objectes de la classe son iguals, si ho son
+     * retornem un true si no un false
      */
-    
+
     public boolean equals(Object o) {
         boolean isEqual = false;
-        
-        if(this == o){
+
+        if (this == o) {
             isEqual = true;
-        }else if (o instanceof User){
+        } else if (o instanceof User) {
             User that = (User) o;
             isEqual = (this.userID).equals(that.userID);
         }
         return isEqual;
     }
-    
-    /** Metode toString per retornar un String amb les caracteristiques necessaries requerides per l'enunciat de la practica
+
+    /**
+     * Metode toString per retornar un String amb les caracteristiques necessaries
+     * requerides per l'enunciat de la practica
      */
-    
-    public String toString(){
-        
+
+    public String toString() {
+
         StringBuffer s = new StringBuffer();
         s.append(this.name);
         return s.toString();
     }
-    
-    /** Metode que retorna un List<Artist> que son el artistes favorits del user
+
+    /**
+     * Metode que retorna un List<Artist> que son el artistes favorits del user
      */
-    
-    public List<Artist> getFavorites(){
+
+    public List<Artist> getFavorites() {
         return this.favorits;
     }
-    
-    /** Metode que retorna un List<AudioClip> dels Audioclips preferits del user
+
+    /**
+     * Metode que retorna un List<AudioClip> dels Audioclips preferits del user
      */
-    
-    public List<AudioClip> getPersonalCollection(){
+
+    public List<AudioClip> getPersonalCollection() {
         return this.audioclips;
     }
-    
-    /** Metode que retorna un List<Rating> dels ratings fets pel user
+
+    /**
+     * Metode que retorna un List<Rating> dels ratings fets pel user
      */
-    
-    public List<Rating> getRating(){
+
+    public List<Rating> getRating() {
         return this.ratings;
     }
-    
-    /** Metode que retorna un List<NonFreeAudioClips> dels Audioclips comprats pel user
+
+    /**
+     * Metode que retorna un List<NonFreeAudioClips> dels Audioclips comprats pel
+     * user
      */
-    
-    public List<NonFreeAudioClip> getPurchases(){
+
+    public List<NonFreeAudioClip> getPurchases() {
         return this.nonfreeaudioclips;
     }
-    
-    /** Metode que retorna el UserId en un String
+
+    /**
+     * Metode que retorna el UserId en un String
      */
-    
-    public String getUserId(){
+
+    public String getUserId() {
         return this.userID;
     }
-    
-    /** Mewtode que estableix el userID
+
+    /**
+     * Mewtode que estableix el userID
      */
-    
-    public void setUserId(String userid){
+
+    public void setUserId(String userid) {
         this.userID = userid;
     }
-    
-    /** Metode que retorna el name en un String
+
+    /**
+     * Metode que retorna el name en un String
      */
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    
-    /** Metode que estableix el name
+
+    /**
+     * Metode que estableix el name
      */
-    
+
     public void setName(String name) {
         this.name = name;
     }
-    
+
 }
-
-
-
-
-
-
-
