@@ -62,8 +62,16 @@ public class cifrado_Cesar {
                         cifrado.append((char) (texto.charAt(i) + codigo));
 
                     }
+                } else if (texto.charAt(i) >= '0' && texto.charAt(i) <= '9') {
+                    if ((texto.charAt(i) + codigo) > '9') {
+                        cifrado.append((char) (texto.charAt(i) + codigo - 26));
+                    } else {
+                        cifrado.append((char) (texto.charAt(i) + codigo));
+
+                    }
                 }
             }
+
         }
         return cifrado.toString();
 
@@ -91,9 +99,17 @@ public class cifrado_Cesar {
                     } else {
                         cifrado.append((char) (texto.charAt(i) - codigo));
                     }
+                } else if (texto.charAt(i) >= '0' && texto.charAt(i) <= '9') {
+                    if ((texto.charAt(i) - codigo) < '0') {
+                        cifrado.append((char) (texto.charAt(i) - codigo + 26));
+                    } else {
+                        cifrado.append((char) (texto.charAt(i) - codigo));
+                    }
                 }
             }
         }
         return cifrado.toString();
+
     }
+
 }
