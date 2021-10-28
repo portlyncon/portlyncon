@@ -11,8 +11,8 @@ public class ShoppingCart {
     public void addItem(Item it) {
 
         if (!arr.contains(it)) {
-            arr.addAll(arr);
-
+            arr.add(it);
+            System.err.println("afeguit item");
         } else
             System.err.println("ja existeix aquest item");
     }
@@ -47,7 +47,8 @@ public class ShoppingCart {
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
         ShoppingCart carrito = new ShoppingCart();
-
+        Item nuevo = new Item("ddd", "ttt", 10);
+        carrito.addItem(nuevo);
         int opcion; // Guardaremos la opcion del usuario
         do {
             System.out.println("1. Listar item en carrito");
@@ -73,8 +74,8 @@ public class ShoppingCart {
                     System.out.println("Escribe precio:");
                     Integer pre = sn.nextInt();
                     if (pre > 0) {
-                        Item nuevo = new Item(name, des, pre);
-                        carrito.addItem(nuevo);
+                        // Item nuevo = new Item(name, des, pre);
+                        // carrito.addItem(nuevo);
                     }
                     break;
                 case 3:
