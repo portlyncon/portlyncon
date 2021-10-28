@@ -7,7 +7,7 @@ public class Item {
     public Integer precio;
 
     /**
-     * Metode constructor de la classe, inicialitzem les variables code i name
+     * Metode constructor de la classe, inicialitzem les variables
      */
 
     public Item(String name, String description, Integer precio) {

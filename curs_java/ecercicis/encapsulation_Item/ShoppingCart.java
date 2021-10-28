@@ -35,20 +35,23 @@ public class ShoppingCart {
         return precioTotal;
     }
 
-    public String Listar_Items() {
+    public ArrayList<String> Listar_Items() {
+        ArrayList<String> lista = new ArrayList<String>();
 
         for (Item items : arr) {
-            return "Nombre: " + items.getName();
+            lista.add(items.getName());
+
         }
-        return null;
+
+        return lista;
+
     }
 
     public static void main(String[] args) {
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
         ShoppingCart carrito = new ShoppingCart();
-        Item nuevo = new Item("ddd", "ttt", 10);
-        carrito.addItem(nuevo);
+
         int opcion; // Guardaremos la opcion del usuario
         do {
             System.out.println("1. Listar item en carrito");
@@ -63,19 +66,26 @@ public class ShoppingCart {
                 switch (opcion) {
                 case 1:
                     System.out.println("Has seleccionado la opción 1");
-                    System.out.println(carrito.Listar_Items());
+
+                    for (int i = 0; i < carrito.Listar_Items().size(); i++) {
+
+                        System.out.println(carrito.Listar_Items().get(i));
+                    }
+
                     break;
                 case 2:
-                    System.out.println("Has seleccionado la opción 2");
+                    sn.nextLine(); // limpiar el buffer
+                    // System.out.println("Has seleccionado la opción 2");
                     System.out.println("Escribe nombre:");
                     String name = sn.nextLine();
                     System.out.println("Escribe descripcion:");
                     String des = sn.nextLine();
+                    des = "prova";
                     System.out.println("Escribe precio:");
                     Integer pre = sn.nextInt();
                     if (pre > 0) {
-                        // Item nuevo = new Item(name, des, pre);
-                        // carrito.addItem(nuevo);
+                        Item nuevo = new Item(name, des, pre);
+                        carrito.addItem(nuevo);
                     }
                     break;
                 case 3:
