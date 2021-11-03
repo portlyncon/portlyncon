@@ -43,6 +43,7 @@ public class exercici2 {
         }
     }
 
+    // s'encapsulen els metodes static
     private static boolean checkLower(String password) {
         boolean encontrada = false;
         for (char c : password.toCharArray()) {// per passar el string a un array de chars .toCharArray()
