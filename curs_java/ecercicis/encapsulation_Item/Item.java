@@ -10,6 +10,9 @@ public class Item {
      * Metode constructor de la classe, inicialitzem les variables
      */
 
+    public Item() {
+    }
+
     public Item(String name, String description, Integer precio) {
 
         this.name = name;

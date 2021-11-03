@@ -2,6 +2,7 @@ package curs_java.ecercicis.encapsulation_Item;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class ShoppingCart {
@@ -18,14 +19,28 @@ public class ShoppingCart {
     }
 
     public void delItem(String it) {
-        if (arr.contains(it)) {
 
-            System.err.println("no existeix aquest item");
-
+        boolean borrado = false;
+        Item borrado_item = new Item();
+        for (Item items : arr) {
+            if (it.equals(items.getName())) {
+                borrado = true;
+                borrado_item = items;
+            }
+        }
+        if (borrado) {
+            arr.remove(borrado_item);
         } else
-
-            arr.remove(it);
+            System.err.println("no existeix aquest item");
     }
+
+    /*
+     * if (arr.contains(it)) {
+     * 
+     * arr.remove(it);
+     * 
+     * } else System.err.println("no existeix aquest item");
+     */
 
     public Integer suma_total() {
         Integer precioTotal = 0;
@@ -91,6 +106,8 @@ public class ShoppingCart {
                 case 3:
                     System.out.println("Has seleccionado la opción 3");
                     System.out.println("Escribe el nombre del item a borrar");
+                    sn.nextLine(); // limpiar el buffer
+
                     String item_del = sn.nextLine();
                     carrito.delItem(item_del);
                     break;
