@@ -2,7 +2,6 @@ package curs_java.ecercicis.encapsulation_Item;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 public class ShoppingCart {
@@ -95,7 +94,6 @@ public class ShoppingCart {
                     String name = sn.nextLine();
                     System.out.println("Escribe descripcion:");
                     String des = sn.nextLine();
-                    des = "prova";
                     System.out.println("Escribe precio:");
                     Integer pre = sn.nextInt();
                     if (pre > 0) {
@@ -130,6 +128,7 @@ public class ShoppingCart {
                 sn.next();
             }
         } while (!salir);
+        sn.close();
     }
 
 }

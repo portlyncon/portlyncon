@@ -6,13 +6,13 @@ public class Item {
     public String description;
     public Integer precio;
 
-    /**
-     * Metode constructor de la classe, inicialitzem les variables
-     */
-
+    // construcctor buit
     public Item() {
     }
 
+    /**
+     * Metode constructor de la classe, inicialitzem les variables
+     */
     public Item(String name, String description, Integer precio) {
 
         this.name = name;
