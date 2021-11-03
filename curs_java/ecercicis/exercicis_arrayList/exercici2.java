@@ -12,6 +12,7 @@ public class exercici2 {
         for (int i = 1; i <= 10; i++) {
 
             Integer num = rand.nextInt(99 + 1);
+            numers.add(num);
             if (esprimo(num)) {
 
                 primos.add(num);
