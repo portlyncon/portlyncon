@@ -17,7 +17,7 @@ public class exercici1 {
             numers.add(num);
         }
         System.out.println("El mes gran es" + valor_mayor(numers));
-        System.out.println("El mes gran es" + valor_menor(numers));
+        System.out.println("El mes petit es" + valor_menor(numers));
     }
 
     public static Integer valor_mayor(ArrayList<Integer> vector) {
