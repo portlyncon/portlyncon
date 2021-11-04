@@ -22,8 +22,6 @@ public class exercici1 {
 
     public static Integer valor_mayor(ArrayList<Integer> vector) {
 
-        // per saber el max o el minim de collections Integer max =
-        // Collections.max(vector);
         Integer max = 0;
         for (int x = 0; x < vector.size(); x++) {
 
@@ -38,6 +36,8 @@ public class exercici1 {
 
     }
 
+    // per saber el max o el minim de collections Integer max =
+    // Collections.max(vector);
     public static Integer valor_menor(ArrayList<Integer> vector) {
 
         Integer min = Collections.min(vector);
