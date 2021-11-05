@@ -3,20 +3,40 @@ package curs_java.ecercicis.baraja_española;
 
 public class Carta {
 
-    // Variables
     int numero;
     String palo;
-    // estetica ds = new estetica();
+
+    public Carta() {
+    }
 
     public Carta(int n, String p) {
         numero = n;
         palo = p;
     }
 
+    // s'ha de impementar el metode iquals per saber so ja existeix aquesta carta
+    public boolean equals(Object o) {
+
+        boolean isEqual = false;
+        if (o instanceof Carta) {
+            Carta it = (Carta) o;
+            isEqual = (this.palo) == (((Carta) o).getName()) && (this.numero) == (((Carta) o).getNumero());
+        }
+        return isEqual;
+    }
+
+    public String getName() {
+        return this.palo;
+    }
+
+    public Integer getNumero() {
+        return this.numero;
+    }
+
     public void mostrar() {
-        // ds.limpiarlnSM("#", 25);
+
         System.out.println("Numero: " + numero);
         System.out.println("Palo: " + palo);
-        // ds.limpiarlnSM("#", 25);
+
     }
 }
