@@ -32,7 +32,7 @@ public class exercici3 {
         // pintamos el acumulado de las columnas excluyendo el acumulado de los
         // acumulados
         for (int i = 0; i < sumCols.length - 1; i++) {
-            System.out.printf("02d ", sumCols[i]);
+            System.out.printf("%02d ", sumCols[i]);
         }
         // pintamos el acumulado de los acumulados
         System.out.printf("=> %03d \n", sumCols[5]);
