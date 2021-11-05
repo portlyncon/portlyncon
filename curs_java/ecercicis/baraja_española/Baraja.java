@@ -21,9 +21,9 @@ public class Baraja {
 
         boolean salir = false;
         while (!salir) {
-            System.out.println("Que quieres hacer?");
+
             System.out.println("1. Barajar las cartas");
-            System.out.println("2. Dar la vuelta a la ultima carta");
+            System.out.println("2. siguiente carta");
             System.out.println("3. Salir");
             int opcion = entrada.nextInt();
 
@@ -44,6 +44,7 @@ public class Baraja {
             }
             ds.limpiarln(25);
         }
+        entrada.close();
     }
 
     public static void baraja() {
@@ -119,10 +120,12 @@ public class Baraja {
         System.out.println("2. No, no quiero " + mensaje);
         int seguro = entrada.nextInt();
         if (seguro == 1) {
+            entrada.close();
             return true;
         } else {
             System.out.println("Cancelado");
         }
+        entrada.close();
         return false;
     }
 
