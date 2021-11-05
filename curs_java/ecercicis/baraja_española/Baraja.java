@@ -47,10 +47,10 @@ public class Baraja {
     }
 
     public static void baraja() {
-        Scanner entrada = new Scanner(System.in);
+        // Scanner entrada = new Scanner(System.in);
 
-        System.out.println("De cuantas cartas quieres barajar");
-        int numCartas = entrada.nextInt();
+        // System.out.println("De cuantas cartas quieres barajar");
+        int numCartas = 40;// entrada.nextInt();
 
         if (baraja.empty()) {
             // Comienza a añadir cartas
