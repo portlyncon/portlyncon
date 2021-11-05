@@ -7,13 +7,13 @@ public class Baraja {
 
     // Variables
     static Stack<Carta> baraja = new Stack<Carta>();
-    static estetica ds = new estetica();
+    // static estetica ds = new estetica();
 
     public static void main(String[] args) {
-        ds.titulo();
+        // ds.titulo();
         menu();
         System.out.println("Programa finalizado correctamente");
-        ds.credito();
+        // ds.credito();
     }
 
     public static void menu() {
@@ -42,7 +42,7 @@ public class Baraja {
             default:
                 System.out.println("La opcion escogida no es valida");
             }
-            ds.limpiarln(25);
+            // ds.limpiarln(25);
         }
         entrada.close();
     }
@@ -101,7 +101,7 @@ public class Baraja {
 
     public static void getCarta() {
         // Comprobamos que no este vacia la baraja
-        ds.limpiarln(25);
+        // ds.limpiarln(25);
 
         if (baraja.empty()) {
             System.out.println("La baraja esta vacia, baraja de nuevo primero");

@@ -6,7 +6,7 @@ public class Carta {
     // Variables
     int numero;
     String palo;
-    estetica ds = new estetica();
+    // estetica ds = new estetica();
 
     public Carta(int n, String p) {
         numero = n;
@@ -14,9 +14,9 @@ public class Carta {
     }
 
     public void mostrar() {
-        ds.limpiarlnSM("#", 25);
+        // ds.limpiarlnSM("#", 25);
         System.out.println("Numero: " + numero);
         System.out.println("Palo: " + palo);
-        ds.limpiarlnSM("#", 25);
+        // ds.limpiarlnSM("#", 25);
     }
 }
