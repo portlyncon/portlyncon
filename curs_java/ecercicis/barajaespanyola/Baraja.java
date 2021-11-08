@@ -4,7 +4,6 @@ import java.util.Stack;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.Random;
 
 public class Baraja {
@@ -194,39 +193,8 @@ public class Baraja {
 
         }
 
-        // pasem de int a String els pals de la baraja
-        /*
-         * switch (paloI) { case 1: paloC = "Oro"; break; case 2: paloC = "Copa"; break;
-         * case 3: paloC = "Espada"; break; case 4: paloC = "Basto"; break; }
-         */
-
-        // ########################comprovar si la carta ja existeix
-        // ###########################################
-        /*
-         * public void addItem(Item it) {
-         * 
-         * if (!arr.contains(it)) { arr.add(it); System.err.println("afeguit item"); }
-         * else System.err.println("ja existeix aquest item"); }
-         */
-
-        // baraja.push(new Carta(numC, paloC));
     }
 
-    /*
-     * r/* eordenar el arraylist de arr con ArrayList reactivosR = new ArrayList();
-     * reactivosR.add("r1"); reactivosR.add("r4"); reactivosR.add("r3");
-     * reactivosR.add("r4"); reactivosR.add("r5"); reactivosR.add("r1");
-     * reactivosR.add("r2"); reactivosR.add("r3"); reactivosR.add("r4");
-     * reactivosR.add("r5"); Random rndm = new Random(); rndm.setSeed(1000);
-     * Collections.shuffle(reactivosR, rndm); for(int i=1; i<10; i++) {
-     * System.out.println("Reactivo ya randomizado: " + reactivosR.get(i)); }
-     */
-
-    /*
-     * public static int random(int min, int max) {
-     * 
-     * int num = (int) (Math.random() * max + min); return num; }
-     */
     public static void siguienteCarta(int index) {
 
         if (arr.isEmpty()) {
@@ -238,15 +206,7 @@ public class Baraja {
             System.out.println("Carta: " + arr.get(index).palo + " " + arr.get(index).numero);
             mon.add(arr.get(index));
         }
-        /*
-         * if (baraja.empty()) {
-         * System.out.println("La baraja esta vacia, baraja de nuevo primero"); } else {
-         * baraja.pop().mostrar();
-         * 
-         * }
-         * 
-         * System.out.println("Te quedan " + baraja.size() + " cartas en la baraja");
-         */
+
     }
 
 }
