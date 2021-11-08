@@ -18,7 +18,7 @@ public class Baraja {
 
     public static void menu() {
         Scanner entrada = new Scanner(System.in);
-
+        int index = 39;
         boolean salir = false;
         while (!salir) {
 
@@ -32,7 +32,8 @@ public class Baraja {
                 baraja();
                 break;
             case 2:
-                siguienteCarta();
+                siguienteCarta(index);
+                index = index - 1;
                 break;
             case 3:
 
@@ -49,30 +50,30 @@ public class Baraja {
 
     public static void baraja() {
 
-        int numCartas = 12;
+        int numCartas = 13;
 
         // generem les 40 cartes
 
-        for (int i = 0; i < numCartas; i++) {
+        for (int i = 1; i < numCartas; i++) {
 
-            if (i != 8 || i != 9) {
+            if (i != 8 && i != 9) {
                 nuevaCarta(1, i);
             }
         }
-        for (int j = 0; j < numCartas; j++) {
+        for (int j = 1; j < numCartas; j++) {
 
-            if (j != 8 || j != 9) {
+            if (j != 8 && j != 9) {
                 nuevaCarta(2, j);
             }
         }
-        for (int k = 0; k < numCartas; k++) {
+        for (int k = 1; k < numCartas; k++) {
 
-            if (k != 8 || k != 9) {
+            if (k != 8 && k != 9) {
                 nuevaCarta(3, k);
             }
         }
-        for (int l = 0; l < numCartas; l++) {
-            if (l != 8 || l != 9) {
+        for (int l = 1; l < numCartas; l++) {
+            if (l != 8 && l != 9) {
                 nuevaCarta(4, l);
             }
         }
@@ -95,16 +96,16 @@ public class Baraja {
 
             switch (palo) {
             case 1:
-                paloC = "Oro";
+                paloC = "Oros";
                 break;
             case 2:
-                paloC = "Copa";
+                paloC = "Copas";
                 break;
             case 3:
-                paloC = "Espada";
+                paloC = "Espadas";
                 break;
             case 4:
-                paloC = "Basto";
+                paloC = "Bastos";
                 break;
             }
 
@@ -151,16 +152,26 @@ public class Baraja {
      * 
      * int num = (int) (Math.random() * max + min); return num; }
      */
-    public static void siguienteCarta() {
+    public static void siguienteCarta(int index) {
 
-        if (baraja.empty()) {
+        if (arr.isEmpty()) {
+
             System.out.println("La baraja esta vacia, baraja de nuevo primero");
+
         } else {
-            baraja.pop().mostrar();
+
+            System.out.println("Carta: " + arr.get(index).palo + " " + arr.get(index).numero);
 
         }
-
-        System.out.println("Te quedan " + baraja.size() + " cartas en la baraja");
+        /*
+         * if (baraja.empty()) {
+         * System.out.println("La baraja esta vacia, baraja de nuevo primero"); } else {
+         * baraja.pop().mostrar();
+         * 
+         * }
+         * 
+         * System.out.println("Te quedan " + baraja.size() + " cartas en la baraja");
+         */
     }
 
 }
