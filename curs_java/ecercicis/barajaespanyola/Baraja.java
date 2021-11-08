@@ -55,37 +55,40 @@ public class Baraja {
 
             for (int i = 0; i < numCartas; i++) {
 
-                if (i !)
-                nuevaCarta(1);
+                if (i != 8 || i != 9) {
+                    nuevaCarta(1, i);
+                }
             }
             for (int i = 0; i < numCartas; i++) {
 
-                
-                nuevaCarta(2);
+                if (i != 8 || i != 9) {
+                    nuevaCarta(2, i);
+                }
             }
             for (int i = 0; i < numCartas; i++) {
 
-                
-                nuevaCarta(3);
+                if (i != 8 || i != 9) {
+                    nuevaCarta(3, i);
+                }
             }
             for (int i = 0; i < numCartas; i++) {
-
-                
-                nuevaCarta(4);
+                if (i != 8 || i != 9) {
+                    nuevaCarta(4, i);
+                }
             }
         } else {
             baraja.clear();
-            
+
         }
         System.out.println("Se han barajeado " + baraja.size() + " cartas");
     }
 
-    public static void nuevaCarta(int palo) {
+    public static void nuevaCarta(int palo, int num) {
 
         Boolean esta = true;
 
         while (esta) {
-            int num = random(1, 10);
+
             String paloC = "";
 
             switch (palo) {
