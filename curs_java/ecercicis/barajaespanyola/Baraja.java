@@ -4,12 +4,14 @@ import java.util.Stack;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.Random;
 
 public class Baraja {
 
     static Stack<Carta> baraja = new Stack<Carta>();
     static ArrayList<Carta> arr = new ArrayList<Carta>();
+    static ArrayList<Carta> mon = new ArrayList<Carta>();
 
     public static void main(String[] args) {
 
@@ -26,7 +28,11 @@ public class Baraja {
 
             System.out.println("1. Barajar las cartas");
             System.out.println("2. siguiente carta");
-            System.out.println("3. Salir");
+            System.out.println("3. cartas disponibles");
+            System.out.println("4. siguiente carta");
+            System.out.println("5. listar cartas del monton");
+            System.out.println("6. siguiente carta");
+            System.out.println("7. Salir");
             int opcion = entrada.nextInt();
 
             switch (opcion) {
@@ -42,8 +48,37 @@ public class Baraja {
                     index = index - 1;
                 }
                 break;
-
             case 3:
+
+                cartesDisponibles(index);
+
+                break;
+
+            case 4:
+
+                System.out.println("Quantes cartes vols?");
+                entrada.nextLine(); // limpiar el buffer
+
+                int numCartasPedidas = entrada.nextInt();
+                if (numCartasPedidas < index) {
+                    for (int i = 0; i < numCartasPedidas; i++) {
+                        System.out.println("Carta: " + arr.get(index).palo + " " + arr.get(index).numero);
+                        mon.add(arr.get(index));
+                        index = index - 1;
+                    }
+                }
+                break;
+
+            case 5:
+
+                if (mon.isEmpty()) {
+                    System.out.println("no ha salido ninguna carta");
+                } else {
+                    listarCartasMonton();
+                }
+                break;
+
+            case 7:
 
                 salir = true;
 
@@ -54,6 +89,19 @@ public class Baraja {
 
         }
         entrada.close();
+    }
+
+    private static void listarCartasMonton() {
+        for (int i = 0; i < mon.size(); i++) {
+            System.out.println(mon.get(i).palo + mon.get(i).numero);
+        }
+
+    }
+
+    private static void cartesDisponibles(int dis) {
+        dis = dis + 1;
+        System.out.println("Cartas disponibles: " + dis);
+
     }
 
     private static void reordenar() {
@@ -175,7 +223,7 @@ public class Baraja {
         } else {
 
             System.out.println("Carta: " + arr.get(index).palo + " " + arr.get(index).numero);
-
+            mon.add(arr.get(index));
         }
         /*
          * if (baraja.empty()) {
