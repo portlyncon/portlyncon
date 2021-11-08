@@ -2,10 +2,12 @@ package curs_java.ecercicis.barajaespanyola;
 
 import java.util.Stack;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Baraja {
 
     static Stack<Carta> baraja = new Stack<Carta>();
+    static ArrayList<Carta> arr = new ArrayList<Carta>();
 
     public static void main(String[] args) {
 
@@ -47,50 +49,96 @@ public class Baraja {
 
     public static void baraja() {
 
-        int numCartas = 40;
+        int numCartas = 10;
 
         if (baraja.empty()) {// generem les 40 cartes
 
             for (int i = 0; i < numCartas; i++) {
 
-                nuevaCarta();
+                if (i !)
+                nuevaCarta(1);
+            }
+            for (int i = 0; i < numCartas; i++) {
+
+                
+                nuevaCarta(2);
+            }
+            for (int i = 0; i < numCartas; i++) {
+
+                
+                nuevaCarta(3);
+            }
+            for (int i = 0; i < numCartas; i++) {
+
+                
+                nuevaCarta(4);
             }
         } else {
             baraja.clear();
-            for (int i = 0; i < numCartas; i++) {
-                nuevaCarta();
-            }
+            
         }
         System.out.println("Se han barajeado " + baraja.size() + " cartas");
     }
 
-    public static void nuevaCarta() {
+    public static void nuevaCarta(int palo) {
 
-        int numC = random(1, 10);
-        int paloI = random(1, 4);
-        String paloC = null;
+        Boolean esta = true;
+
+        while (esta) {
+            int num = random(1, 10);
+            String paloC = "";
+
+            switch (palo) {
+            case 1:
+                paloC = "Oro";
+                // break;
+            case 2:
+                paloC = "Copa";
+                // break;
+            case 3:
+                paloC = "Espada";
+                // break;
+            case 4:
+                paloC = "Basto";
+                // break;
+            }
+
+            Carta nova = new Carta(num, paloC);
+
+            if (!arr.contains(nova)) {
+                arr.add(nova);
+                esta = false;
+            }
+
+        }
 
         // pasem de int a String els pals de la baraja
-        switch (paloI) {
-        case 1:
-            paloC = "Oro";
-            break;
-        case 2:
-            paloC = "Copa";
-            break;
-        case 3:
-            paloC = "Espada";
-            break;
-        case 4:
-            paloC = "Basto";
-            break;
-        }
+        /*
+         * switch (paloI) { case 1: paloC = "Oro"; break; case 2: paloC = "Copa"; break;
+         * case 3: paloC = "Espada"; break; case 4: paloC = "Basto"; break; }
+         */
 
         // ########################comprovar si la carta ja existeix
         // ###########################################
+        /*
+         * public void addItem(Item it) {
+         * 
+         * if (!arr.contains(it)) { arr.add(it); System.err.println("afeguit item"); }
+         * else System.err.println("ja existeix aquest item"); }
+         */
 
-        baraja.push(new Carta(numC, paloC));
+        // baraja.push(new Carta(numC, paloC));
     }
+
+    /*
+     * r/* eordenar el arraylist de arr con ArrayList reactivosR = new ArrayList();
+     * reactivosR.add("r1"); reactivosR.add("r4"); reactivosR.add("r3");
+     * reactivosR.add("r4"); reactivosR.add("r5"); reactivosR.add("r1");
+     * reactivosR.add("r2"); reactivosR.add("r3"); reactivosR.add("r4");
+     * reactivosR.add("r5"); Random rndm = new Random(); rndm.setSeed(1000);
+     * Collections.shuffle(reactivosR, rndm); for(int i=1; i<10; i++) {
+     * System.out.println("Reactivo ya randomizado: " + reactivosR.get(i)); }
+     */
 
     public static int random(int min, int max) {
 
