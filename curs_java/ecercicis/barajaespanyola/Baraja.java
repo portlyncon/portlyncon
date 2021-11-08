@@ -1,4 +1,4 @@
-package curs_java.ecercicis.baraja_española;
+package curs_java.ecercicis.barajaespanyola;
 
 import java.util.Stack;
 import java.util.Scanner;

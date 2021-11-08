@@ -1,5 +1,5 @@
 
-package curs_java.ecercicis.baraja_española;
+package curs_java.ecercicis.barajaespanyola;
 
 public class Carta {
 
