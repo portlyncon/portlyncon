@@ -49,38 +49,40 @@ public class Baraja {
 
     public static void baraja() {
 
-        int numCartas = 10;
+        int numCartas = 12;
 
-        if (baraja.empty()) {// generem les 40 cartes
+        // generem les 40 cartes
 
-            for (int i = 0; i < numCartas; i++) {
+        for (int i = 0; i < numCartas; i++) {
 
-                if (i != 8 || i != 9) {
-                    nuevaCarta(1, i);
-                }
+            if (i != 8 || i != 9) {
+                nuevaCarta(1, i);
             }
-            for (int i = 0; i < numCartas; i++) {
-
-                if (i != 8 || i != 9) {
-                    nuevaCarta(2, i);
-                }
-            }
-            for (int i = 0; i < numCartas; i++) {
-
-                if (i != 8 || i != 9) {
-                    nuevaCarta(3, i);
-                }
-            }
-            for (int i = 0; i < numCartas; i++) {
-                if (i != 8 || i != 9) {
-                    nuevaCarta(4, i);
-                }
-            }
-        } else {
-            baraja.clear();
-
         }
-        System.out.println("Se han barajeado " + baraja.size() + " cartas");
+        for (int j = 0; j < numCartas; j++) {
+
+            if (j != 8 || j != 9) {
+                nuevaCarta(2, j);
+            }
+        }
+        for (int k = 0; k < numCartas; k++) {
+
+            if (k != 8 || k != 9) {
+                nuevaCarta(3, k);
+            }
+        }
+        for (int l = 0; l < numCartas; l++) {
+            if (l != 8 || l != 9) {
+                nuevaCarta(4, l);
+            }
+        }
+        /*
+         * else { baraja.clear();
+         * 
+         * }
+         */
+        // System.out.println("Se han barajeado " + baraja.size() + " cartas");
+
     }
 
     public static void nuevaCarta(int palo, int num) {
@@ -94,22 +96,23 @@ public class Baraja {
             switch (palo) {
             case 1:
                 paloC = "Oro";
-                // break;
+                break;
             case 2:
                 paloC = "Copa";
-                // break;
+                break;
             case 3:
                 paloC = "Espada";
-                // break;
+                break;
             case 4:
                 paloC = "Basto";
-                // break;
+                break;
             }
 
             Carta nova = new Carta(num, paloC);
 
             if (!arr.contains(nova)) {
                 arr.add(nova);
+                System.out.println("oooooooooooooooooooooooooooo");
                 esta = false;
             }
 
@@ -143,12 +146,11 @@ public class Baraja {
      * System.out.println("Reactivo ya randomizado: " + reactivosR.get(i)); }
      */
 
-    public static int random(int min, int max) {
-
-        int num = (int) (Math.random() * max + min);
-        return num;
-    }
-
+    /*
+     * public static int random(int min, int max) {
+     * 
+     * int num = (int) (Math.random() * max + min); return num; }
+     */
     public static void siguienteCarta() {
 
         if (baraja.empty()) {
