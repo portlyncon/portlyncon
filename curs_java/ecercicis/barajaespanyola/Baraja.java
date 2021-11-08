@@ -3,6 +3,8 @@ package curs_java.ecercicis.barajaespanyola;
 import java.util.Stack;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class Baraja {
 
@@ -30,11 +32,17 @@ public class Baraja {
             switch (opcion) {
             case 1:
                 baraja();
+
+                reordenar();
+
                 break;
             case 2:
-                siguienteCarta(index);
-                index = index - 1;
+                if (index >= 0) {
+                    siguienteCarta(index);
+                    index = index - 1;
+                }
                 break;
+
             case 3:
 
                 salir = true;
@@ -46,6 +54,12 @@ public class Baraja {
 
         }
         entrada.close();
+    }
+
+    private static void reordenar() {
+        Random rndm = new Random();
+        Collections.shuffle(arr, rndm);
+
     }
 
     public static void baraja() {
