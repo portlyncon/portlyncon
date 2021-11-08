@@ -151,12 +151,6 @@ public class Baraja {
                 nuevaCarta(4, l);
             }
         }
-        /*
-         * else { baraja.clear();
-         * 
-         * }
-         */
-        // System.out.println("Se han barajeado " + baraja.size() + " cartas");
 
     }
 
@@ -187,7 +181,6 @@ public class Baraja {
 
             if (!arr.contains(nova)) {
                 arr.add(nova);
-                System.out.println("oooooooooooooooooooooooooooo");
                 esta = false;
             }
 
