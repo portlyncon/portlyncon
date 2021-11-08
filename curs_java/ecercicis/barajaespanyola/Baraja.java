@@ -29,9 +29,9 @@ public class Baraja {
             System.out.println("1. Barajar las cartas");
             System.out.println("2. siguiente carta");
             System.out.println("3. cartas disponibles");
-            System.out.println("4. siguiente carta");
+            System.out.println("4. pedir cartas");
             System.out.println("5. listar cartas del monton");
-            System.out.println("6. siguiente carta");
+            System.out.println("6. mostrar baraja");
             System.out.println("7. Salir");
             int opcion = entrada.nextInt();
 
@@ -78,6 +78,12 @@ public class Baraja {
                 }
                 break;
 
+            case 6:
+
+                mostrarBaraja(index);
+
+                break;
+
             case 7:
 
                 salir = true;
@@ -89,6 +95,13 @@ public class Baraja {
 
         }
         entrada.close();
+    }
+
+    private static void mostrarBaraja(int index) {
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.println(arr.get(i).palo + arr.get(i).numero);
+        }
+
     }
 
     private static void listarCartasMonton() {
