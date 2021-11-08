@@ -178,7 +178,8 @@ public class Baraja {
             }
 
             Carta nova = new Carta(num, paloC);
-
+            // aqui es comprova que la carta no existeixi en la baralla tot i que ja esta
+            // resolt als metoodes anteriors baraja()
             if (!arr.contains(nova)) {
                 arr.add(nova);
                 esta = false;
