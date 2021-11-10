@@ -1,5 +1,10 @@
 package curs_java.ecercicis.herencia;
 
+//les classes abstractes es per definir mateixos objectes de la mateix familia,
+//defineix la pertinença a un grup i una limitacio que es qeu nomes podem extendre de una classe pare
+
+//les interficies s'utilitzen per definir comportaments comuns amb elements no comuns
+
 interface I1 {// tot el que te definit sempre es public i els metodes sempre son public
               // abstractes i les constants static final
 
@@ -16,7 +21,7 @@ interface I1 {// tot el que te definit sempre es public i els metodes sempre son
 // les interficies tambe poden extendre altres interficies, nomes una
 // una classe pot extender una altre clase
 // una clase pot implementa una o mes interficies
-// una clse pot extendre una ckase e implementar una o mes interficies
+// una clase pot extendre una clase e implementar una o mes interficies
 
 interface I2 extends I1 {
 }
