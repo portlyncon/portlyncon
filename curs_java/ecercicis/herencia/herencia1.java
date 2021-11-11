@@ -1,7 +1,5 @@
 package curs_java.ecercicis.herencia;
 
-import javax.management.ObjectName;
-
 public class herencia1 {
 
     public static void main(String[] args) {

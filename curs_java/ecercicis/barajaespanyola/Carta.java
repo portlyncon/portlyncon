@@ -14,7 +14,7 @@ public class Carta {
         palo = p;
     }
 
-    // s'ha de impementar el metode iquals per saber so ja existeix aquesta carta
+    // s'ha de impementar el metode iquals per saber si ja existeix aquesta carta
     public boolean equals(Object o) {
 
         boolean isEqual = false;

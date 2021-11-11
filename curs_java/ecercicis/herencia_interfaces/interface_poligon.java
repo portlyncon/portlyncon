@@ -1,4 +1,4 @@
-package curs_java.ecercicis.herencia.exercici1;
+package curs_java.ecercicis.herencia_interfaces;
 
 public interface interface_poligon {
 
