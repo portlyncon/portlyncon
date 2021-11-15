@@ -10,23 +10,11 @@ public class Profesor extends Personal {
         apellidos = apellidos;
         correo = correo;
 
-        uni.setProfe(this);
-
-    }
-
-    public void asignar_curso() {
-        curso.assignar_profesor(this);
     }
 
     public String getNombre() {
 
         return nombre;
-    }
-
-    public Curso get_Curso() {
-
-        return this.curso;
-
     }
 
     public boolean equals(Object o) {

@@ -5,7 +5,5 @@ public abstract class Personal {
     String nombre;
     String apellidos;
     String correo;
-    Universidad uni;
-    Curso curso;
 
 }

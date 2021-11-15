@@ -8,24 +8,11 @@ public class Alumno extends Personal {
         apellidos = apellidos;
         correo = correo;
 
-        uni.setAlumno(this);
-
     }
 
     public String getNombre() {
 
         return nombre;
-    }
-
-    void matricular_Curso() {
-
-        curso.assignar_alumnos(this);
-    }
-
-    public Curso get_Curso() {
-
-        return this.curso;
-
     }
 
     public boolean equals(Object o) {
