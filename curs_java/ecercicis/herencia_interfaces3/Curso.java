@@ -29,4 +29,32 @@ public class Curso {
         llistat_alumnes.add(alumno);
     }
 
+    public String getNombre() {
+
+        return nombre;
+    }
+
+    public String getProfe() {
+
+        return this.profe.toString();
+    }
+
+    public String getAlumnos() {
+
+        return this.llistat_alumnes.toString();
+    }
+
+    public boolean equals(Object o) {
+
+        boolean isEqual = false;
+        if (o instanceof Curso) {
+            Curso it = (Curso) o;
+            isEqual = (this.getName()) == (((Alumno) o).getName());
+        }
+        return isEqual;
+    }
+
+    private Object getName() {
+        return this;
+    }
 }

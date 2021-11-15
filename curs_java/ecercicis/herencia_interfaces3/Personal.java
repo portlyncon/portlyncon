@@ -7,4 +7,5 @@ public abstract class Personal {
     String correo;
     Universidad uni;
     Curso curso;
+
 }
