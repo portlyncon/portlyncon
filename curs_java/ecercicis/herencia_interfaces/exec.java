@@ -8,7 +8,7 @@ public class exec {
 
     public static void main(String[] args) {
         int[] a = { 1, 2 };
-        int[] b = { 3, 6 };
+        int[] b = { -3, -6 };
         int[] c = { 5, 4 };
         int[] d = { 3, 5 };
 

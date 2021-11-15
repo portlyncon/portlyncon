@@ -1,6 +1,6 @@
 package curs_java.ecercicis.herencia_interfaces2;
 
-import java.sql.Date;
+import java.util.Date;
 
 public abstract class consumible {
 
@@ -17,11 +17,11 @@ public abstract class consumible {
 
     }
 
-    Date devolver_fecha() {
+    Date getDate() {
         return fecha_publicacion;
     }
 
-    int devolver_codige() {
+    int getCodigo() {
         return codigo;
     }
 

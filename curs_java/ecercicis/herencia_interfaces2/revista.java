@@ -1,6 +1,6 @@
 package curs_java.ecercicis.herencia_interfaces2;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class revista extends consumible {
 
@@ -18,8 +18,8 @@ public class revista extends consumible {
     String devolver_parametros() {
 
         String cadena = "";
-        cadena = (Integer.toString(codigo) + " " + titulo + " " + fecha_publicacion.toString()
-                + Integer.toString(numero_revista));
+        cadena = ("codigo  " + Integer.toString(codigo) + " titulo  " + titulo + "fecha  "
+                + fecha_publicacion.toString() + "numero  " + Integer.toString(numero_revista));
         return cadena;
 
     }

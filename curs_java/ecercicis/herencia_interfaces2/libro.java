@@ -1,6 +1,6 @@
 package curs_java.ecercicis.herencia_interfaces2;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class libro extends consumible implements interface_prestable {
 
