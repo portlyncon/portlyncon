@@ -6,8 +6,8 @@ public class adivinaException extends IllegalArgumentException {
     public static final int MAYOR = 1;
     public static final int MENOR = -1;
 
-    public adivinaException(String mes) {
-        super(mes);
+    public adivinaException(int acierto2) {
+        super(String.valueOf(acierto2));
     }
 
 }
