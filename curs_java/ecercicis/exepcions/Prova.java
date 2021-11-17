@@ -2,7 +2,7 @@ package curs_java.ecercicis.exepcions;
 
 import java.util.Scanner;
 
-public class exec {
+public class Prova {
 
     public static void main(String[] args) {
 
@@ -25,10 +25,17 @@ public class exec {
                 opcion = sn.nextLine();
                 // System.out.println(opcion);
                 try {
+
+                    if (adi.adivina(opcion) == 0) {
+
+                        System.out.println("QUE SUERTE LO HAS ADIVINADO");
+                        salir = true;
+                        break;
+                    }
                     System.out.println(adi.adivina(opcion));
 
                 } catch (adivinaException e) {
-                    this.getOut().println(e.getMessage());
+                    System.out.println(e.getMessage());
                 }
 
                 break;

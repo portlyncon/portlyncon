@@ -16,10 +16,21 @@ public class Adivina {
         // int numero = (int) Math.floor(Math.random() * (LIMITE_MENOR - LIMITE_MAYOR +
         // 1) + LIMITE_MAYOR);
     }
+    // pasamos las excepciones a la calse adivinaException
 
     public int adivina(String num) throws adivinaException {
+        // comprovar si es un numero la cadena de texto
+        boolean isNumeric = num.chars().allMatch(Character::isDigit);
 
+        if (!isNumeric) {
+            throw new adivinaException(adivinaException.no_entero);
+        }
+        // pasar a int el string
         int numi = Integer.parseInt(num);
+
+        if (numi < LIMITE_MENOR || numi > LIMITE_MAYOR) {
+            throw new adivinaException(adivinaException.fuera_rango);
+        }
 
         if (numi != numero) {
             if (numi < numero) {
