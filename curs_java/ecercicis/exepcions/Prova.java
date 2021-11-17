@@ -30,6 +30,7 @@ public class Prova {
 
                         System.out.println("QUE SUERTE LO HAS ADIVINADO");
                         salir = true;
+
                         break;
                     }
                     System.out.println(adi.adivina(opcion));
@@ -45,5 +46,6 @@ public class Prova {
 
             }
         }
+        sn.close();
     }
 }
