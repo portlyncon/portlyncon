@@ -13,7 +13,7 @@ public class PizzaComanda extends Pizza {
         // TODO Auto-generated constructor stub
     }
 
-    public int getMax_Queso() {
-        return this.max_queso;
-    }
+    /*
+     * public int getMax_Queso() { return this.max_queso; }
+     */
 }

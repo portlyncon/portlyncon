@@ -17,7 +17,7 @@ public class Pizzeria {
         if (!Lista_pizzas.contains(pi_co)) {
             System.out.println("Comanda Guay");
             if (Buscar_queso_max(pi_co)) {
-                throw new Pizza_error(Pizza_error.tooMuchCheeseError);
+                throw new TooMuchCheeseError(TooMuchCheeseError.tooMuchCheeseError);
             }
         } else
             throw new Pizza_error(Pizza_error.pizza_error);
