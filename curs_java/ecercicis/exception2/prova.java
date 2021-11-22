@@ -15,7 +15,7 @@ public class prova {
         int cantidad_pizzas = 0;
         int cantidad_queso = 0;
         double precio = 0.0;
-        PizzaComanda pi_co = new PizzaComanda(nombre_pizza, cantidad_queso, precio, cantidad_pizzas);
+        PizzaComanda pi_co = new PizzaComanda();
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
         double total_comanda = 0.0;
@@ -33,7 +33,7 @@ public class prova {
 
                     for (Pizza pizza : pi.Lista_pizzas) {
 
-                        System.out.println("nombre: " + pizza.getNombre() + "precio: " + pizza.getPrecio());
+                        System.out.println("nombre: " + pizza.getNombre() + " precio: " + pizza.getPrecio());
                     }
                 } catch (Pizza_error e) {
                     System.out.println(e.getMessage());
@@ -44,21 +44,28 @@ public class prova {
                 sn.nextLine();
                 System.out.println("Que pizza quieres comprar..");
                 nombre_pizza = sn.nextLine();
-                sn.nextLine();
+                System.out.println(nombre_pizza);
                 System.out.println("Que cantidad de queso quieres...");
                 cantidad_queso = sn.nextInt();
+                System.out.println(cantidad_queso);
                 sn.nextLine();
                 System.out.println("Que cantidad de pizzas quieres...");
                 cantidad_pizzas = sn.nextInt();
+                System.out.println(cantidad_pizzas);
+
                 sn.nextLine();
                 try {
-                    pi.comanda(pi_co);
 
+                    pi_co = new PizzaComanda(nombre_pizza, cantidad_queso, precio, cantidad_pizzas);
+                    precio = pi.comanda(pi_co);
+
+                    System.out.println(precio);
+                    total_comanda = total_comanda + (precio * cantidad_pizzas);
                 } catch (Pizza_error e) {
+                    System.out.println(e.getMessage());
                     // TODO: handle exception
                 }
 
-                total_comanda = total_comanda + pi_co.getPrecio();
                 break;
             case 3:
 

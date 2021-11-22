@@ -4,6 +4,10 @@ public class PizzaComanda extends Pizza {
 
     int Cantidad_pizzas;
 
+    public PizzaComanda() {
+
+    }
+
     public PizzaComanda(String nom, int max_q, double pre, int cantidad_pizzas) {
         this.Cantidad_pizzas = cantidad_pizzas;
         this.nombre = nom;
