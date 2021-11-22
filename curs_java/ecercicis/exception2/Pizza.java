@@ -37,4 +37,7 @@ public class Pizza {
 
     }
 
+    public double getPrecio() {
+        return precio;
+    }
 }
