@@ -8,8 +8,8 @@ public class prova {
     public static void main(String[] args) {
 
         ArrayList<Pizza> lista = new ArrayList<>();
-        Pizza pizza_nova = new Pizza("prova", 3, 3.5);
-        Pizzeria pi = new Pizzeria(lista);
+        Pizza pizza_nova = new Pizza("prova", 3, 3.5);// pizza de prueba
+        Pizzeria pi = new Pizzeria(lista);// Lista de prueba
         pi.Lista_pizzas.add(pizza_nova);
         String nombre_pizza = "";
         int cantidad_pizzas = 0;
@@ -63,7 +63,7 @@ public class prova {
                     total_comanda = total_comanda + (precio * cantidad_pizzas);
                 } catch (Pizza_error e) {
                     System.out.println(e.getMessage());
-                    // TODO: handle exception
+
                 }
 
                 break;
