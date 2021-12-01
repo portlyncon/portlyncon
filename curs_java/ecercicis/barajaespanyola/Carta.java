@@ -9,12 +9,15 @@ public class Carta {
     public Carta() {
     }
 
+
+    //prova
     public Carta(int n, String p) {
         numero = n;
         palo = p;
     }
 
     // s'ha de impementar el metode iquals per saber si ja existeix aquesta carta
+    @Override
     public boolean equals(Object o) {
 
         boolean isEqual = false;
