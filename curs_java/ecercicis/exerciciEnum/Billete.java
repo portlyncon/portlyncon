@@ -4,13 +4,13 @@ public enum Billete implements MonedaBillete {
     CINCO_EUROS(5), DIEZ_EUROS(10), VEINTE_EUROS(20), CINCUENTA_EUROS(50), CIEN_EUROS(100), DOSCIENTOS_EUROS(200),
     QUINIENTOS_EUROS(500);
 
-    private double valor;
+    private final double valor;
 
     Billete(int s) {// constructor de la classe
         valor = s;
     }
 
-    double getValor() {
+    public double getValor() {
         return valor;
     }
 
