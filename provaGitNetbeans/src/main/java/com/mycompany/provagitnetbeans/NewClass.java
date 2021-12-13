@@ -11,5 +11,6 @@ package com.mycompany.provagitnetbeans;
 public class NewClass {
     public static void main(String[] args) {
         System.out.println("com.mycompany.provagitnetbeans.NewClass.main()");
+        System.err.println("fefwefwe");
     }
 }
