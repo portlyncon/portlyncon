@@ -2,13 +2,7 @@ package curs_java.ecercicis.exerciciEnum;
 
 import java.util.Scanner;
 
-public class exercici1Enum {
-
-    public enum DiaSemana {
-
-        Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo;
-
-    }
+public class MainDiasemana {
 
     public static void main(String[] args) {
 
@@ -34,23 +28,24 @@ public class exercici1Enum {
         entrada.close();
     }
 
+    // AIXO es POT ACONSEGUIR AMB EL METODE VALUEOF() DEL ENUM.
     public static String obtenerDia(DiaSemana dia) {
 
         switch (dia) {
-            case Lunes:
-                return DiaSemana.Lunes.toString();
-            case Martes:
-                return DiaSemana.Martes.toString();
-            case Miercoles:
-                return DiaSemana.Miercoles.toString();
-            case Jueves:
-                return DiaSemana.Jueves.toString();
-            case Viernes:
-                return DiaSemana.Viernes.toString();
-            case Sabado:
-                return DiaSemana.Sabado.toString();
-            case Domingo:
-                return DiaSemana.Domingo.toString();
+            case LUNES:
+                return DiaSemana.LUNES.toString();
+            case MARTES:
+                return DiaSemana.MARTES.toString();
+            case MIERCOLES:
+                return DiaSemana.MIERCOLES.toString();
+            case JUEVES:
+                return DiaSemana.JUEVES.toString();
+            case VIERNES:
+                return DiaSemana.VIERNES.toString();
+            case SABADO:
+                return DiaSemana.SABADO.toString();
+            case DOMINGO:
+                return DiaSemana.DOMINGO.toString();
             default:
                 return "";
         }
