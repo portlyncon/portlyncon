@@ -1,0 +1,251 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Java",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ]
+        },
+        {
+            "name": "Java Console App",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ],
+            "externalConsole": true
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "curs_java.Universitat.practica2.EstatuetSalmeronIsaac_POO_Praactica2.src.Main",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main(1)",
+            "request": "launch",
+            "mainClass": "curs_java.Universitat.practica2.Solucio.SRC.Main",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch ClaseDelPaqueteAcceso",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.ClaseDelPaqueteAcceso",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch Baraja",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.barajaespanyola.Baraja",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch cifrado_Cesar",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.cifrado_Cesar",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch ShoppingCart",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.encapsulation_Item.ShoppingCart",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch prova",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exception2.prova",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exemple_lambda$MainLambda",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exemples_lambda.exemple_lambda$MainLambda",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch prova(1)",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exemples_lambda.prova",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch Prova",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exepcions.Prova",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exemple_exepcions",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exepcions.exemple_exepcions",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exercici1",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exercici1",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exercici2",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exercici2",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exercici3",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exercici3",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exercici4",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exercici4",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exercici5",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exercici5",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exercici6",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exercici6",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainDiasemana",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exerciciEnum.MainDiasemana",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exercici1(1)",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exercicis_String.exercici1",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exercici2(1)",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exercicis_String.exercici2",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch Client",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exercicis_arrayList.Client",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exercici1(2)",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exercicis_arrayList.exercici1",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exercici2(2)",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exercicis_arrayList.exercici2",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exercici3(1)",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.exercicis_arrayList.exercici3",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch herencia1",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.herencia.herencia1",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch herencia3",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.herencia.herencia3",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch herencia4",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.herencia.herencia4",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exec",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.herencia_interfaces.exec",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exec(1)",
+            "request": "launch",
+            "mainClass": "curs_java.ecercicis.herencia_interfaces2.exec",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch prova(2)",
+            "request": "launch",
+            "mainClass": "curs_java.projecte1.prova",
+            "projectName": "portlyncon_880d0794"
+        }
+    ]
+}
