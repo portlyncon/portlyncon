@@ -1,88 +1,97 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package curs_java.ecercicis.exemples_lambda;
 
+/**
+ *
+ * @author angelssanchez
+ */
 public class Alumno {
-    public static Object getNomres;
-    private int id;
-    private String cedula;
-    private String nombres;
-    private String apellidos;
-    private String nombreCurso;
-    private double nota;
-    private int edad;
 
-    public Alumno() {
-    }
+   int id;
+   String cedula;
+   String nombres;
+   String apellidos;
+   String nombreCurso;
+   double nota;
+   int edad;
 
-    public Alumno(int id, String cedula, String nombres, String apellidos, String nombreCurso,
-            double nota, int edad) {
-        this.id = id;
-        this.cedula = cedula;
-        this.nombres = nombres;
-        this.apellidos = apellidos;
-        this.nombreCurso = nombreCurso;
-        this.nota = nota;
-        this.edad = edad;
-    }
+   public Alumno() {
+   }
 
-    public int getId() {
-        return id;
-    }
+   public Alumno(int id, String cedula, String nombres, String apellidos, String nombreCurso,
+         double nota, int edad) {
+      this.id = id;
+      this.cedula = cedula;
+      this.nombres = nombres;
+      this.apellidos = apellidos;
+      this.nombreCurso = nombreCurso;
+      this.nota = nota;
+      this.edad = edad;
+   }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+   public int getId() {
+      return id;
+   }
 
-    public String getCedula() {
-        return cedula;
-    }
+   public void setId(int id) {
+      this.id = id;
+   }
 
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
+   public String getCedula() {
+      return cedula;
+   }
 
-    public String getNombres() {
-        return nombres;
-    }
+   public void setCedula(String cedula) {
+      this.cedula = cedula;
+   }
 
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
-    }
+   public String getNombres() {
+      return nombres;
+   }
 
-    public String getApellidos() {
-        return apellidos;
-    }
+   public void setNombres(String nombres) {
+      this.nombres = nombres;
+   }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
+   public String getApellidos() {
+      return apellidos;
+   }
 
-    public String getNombreCurso() {
-        return nombreCurso;
-    }
+   public void setApellidos(String apellidos) {
+      this.apellidos = apellidos;
+   }
 
-    public void setNombreCurso(String nombreCurso) {
-        this.nombreCurso = nombreCurso;
-    }
+   public String getNombreCurso() {
+      return nombreCurso;
+   }
 
-    public double getNota() {
-        return nota;
-    }
+   public void setNombreCurso(String nombreCurso) {
+      this.nombreCurso = nombreCurso;
+   }
 
-    public void setNota(double nota) {
-        this.nota = nota;
-    }
+   public double getNota() {
+      return nota;
+   }
 
-    public int getEdad() {
-        return edad;
-    }
+   public void setNota(double nota) {
+      this.nota = nota;
+   }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
+   public int getEdad() {
+      return edad;
+   }
 
-    @Override
-    public String toString() {
-    return id+" | "+cedula+" | "+nombres+" | "+apellidos+" | Curso: "+nombreCurso+" |
-    Nota: "+nota+" | Edad: "+edad;
-    }
+   public void setEdad(int edad) {
+      this.edad = edad;
+   }
+
+   @Override
+   public String toString() {
+      return id + " | " + cedula + " | " + nombres + " | " + apellidos + " | Curso: " + nombreCurso + " | Nota: " + nota
+            + " | Edad: " + edad;
+   }
+
 }
