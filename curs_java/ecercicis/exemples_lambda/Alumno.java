@@ -15,7 +15,7 @@ public class Alumno {
    String nombres;
    String apellidos;
    String nombreCurso;
-   double nota;
+   long nota;
    int edad;
 
    public Alumno() {
@@ -76,7 +76,7 @@ public class Alumno {
       return nota;
    }
 
-   public void setNota(double nota) {
+   public void setNota(long nota) {
       this.nota = nota;
    }
 
