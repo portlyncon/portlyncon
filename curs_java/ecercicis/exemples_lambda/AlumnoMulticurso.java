@@ -15,15 +15,15 @@ public class AlumnoMulticurso extends Alumno {
 
     List<String> ListaCursos;
 
-    public AlumnoMulticurso(int id, String cedula, String nombres, String apellidos, List nombreCurso,
-            double nota, int edad) {
+    public AlumnoMulticurso(int id, String cedula, String nombres, String apellidos, List<String> list,
+            double d, int edad) {
         this.ListaCursos = new ArrayList();
         this.id = id;
         this.cedula = cedula;
         this.nombres = nombres;
         this.apellidos = apellidos;
-        this.ListaCursos = nombreCurso;
-        this.nota = nota;
+        this.ListaCursos = list;
+        this.nota = (long) d;
         this.edad = edad;
     }
 
@@ -35,7 +35,7 @@ public class AlumnoMulticurso extends Alumno {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.nombreCurso = nombreCurso;
-        this.nota = nota;
+        this.nota = (long) nota;
         this.edad = edad;
     }
 
@@ -46,6 +46,10 @@ public class AlumnoMulticurso extends Alumno {
             return nombreCurso;
         }
         return ListaCursos.toString();
+    }
+
+    public double getNota() {
+        return nota;
     }
 
     public String toString() {
