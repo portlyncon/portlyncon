@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch feeding/Main",
+            "request": "launch",
+            "mainClass": "zoo.animal.feeding/Main",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
             "name": "Java",
             "type": "java",
             "request": "launch",
