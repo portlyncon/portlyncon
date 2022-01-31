@@ -1,4 +1,4 @@
-/*
+exit/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -24,7 +24,7 @@ public class ExampleClass {
         cow.setName("Cow");
 
         System.out.println("Thread State of Cat before calling start: " + cat.getState());
-
+        
         cat.start();
         dog.start();
         cow.start();
