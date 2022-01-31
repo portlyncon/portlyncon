@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MainReflexion",
+            "request": "launch",
+            "mainClass": "com.curso.ejemploreflexion.MainReflexion",
+            "projectName": "ejemploReflexion"
+        },
+        {
+            "type": "java",
             "name": "Launch feeding/Main",
             "request": "launch",
             "mainClass": "zoo.animal.feeding/Main",
