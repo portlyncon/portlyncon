@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Baraja",
+            "request": "launch",
+            "mainClass": "zoo.animal.feeding/curs_java.ecercicis.barajaespanyola.Baraja",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExampleClass",
+            "request": "launch",
+            "mainClass": "zoo.animal.feeding/curs_java.ecercicis.ejemploConcurrencia.ExampleClass",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
             "name": "Launch MainReflexion",
             "request": "launch",
             "mainClass": "com.curso.ejemploreflexion.MainReflexion",
