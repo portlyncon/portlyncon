@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Ejercicio1_lista",
+            "request": "launch",
+            "mainClass": "zoo.animal.feeding/curs_java.ecercicis.ejemploConcurrencia.demo.src.main.java.com.concurrencia.Ejercicio1_lista",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch exercici1",
+            "request": "launch",
+            "mainClass": "zoo.animal.feeding/curs_java.ecercicis.ejemploConcurrencia.exercici1",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
             "name": "Launch Baraja",
             "request": "launch",
             "mainClass": "zoo.animal.feeding/curs_java.ecercicis.barajaespanyola.Baraja",
