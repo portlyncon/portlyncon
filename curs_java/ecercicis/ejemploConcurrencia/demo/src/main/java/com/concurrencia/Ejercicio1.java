@@ -12,10 +12,6 @@ import java.util.concurrent.Future;
 //import java.util.logging.Level;
 //import java.util.logging.Logger;
 
-/**
- *
- * @author Toni
- */
 public class Ejercicio1 {
 
     public static void main(String[] args) {

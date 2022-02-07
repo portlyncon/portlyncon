@@ -18,10 +18,6 @@ import java.util.concurrent.TimeUnit;
 //import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
-/**
- *
- * @author Toni
- */
 public class Ejercicio1_lista {
 
     public static void main(String[] args) throws ExecutionException {
