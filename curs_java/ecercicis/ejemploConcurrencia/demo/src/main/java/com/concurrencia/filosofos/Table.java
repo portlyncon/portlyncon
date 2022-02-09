@@ -1,29 +1,20 @@
 package curs_java.ecercicis.ejemploConcurrencia.demo.src.main.java.com.concurrencia.filosofos;
 
-public class Table<E, D> {
+public class Table {
 
-    private final E[] data;
-    private final D[] datad;
-
-    public Table(int size) {
-        data = (E[]) new Philosopher[size];
-        datad = (D[]) new Fork[size];
-
-    }
-
-    public synchronized void take(E x, D y) {
+    public synchronized void take(Fork left, Fork right) {
         // System.out.println(Thread.currentThread().getName() + " -> put()!!");
-
-        // System.out.println(Thread.currentThread().getName() + " -> notifyAll()!!");
-        notifyAll();
-    }
-
-    public synchronized E leave() {
-        // System.out.println(Thread.currentThread().getName() + " -> take()!!");
         while (true) {
             waiting();
-        }
+            // System.out.println(Thread.currentThread().getName() + " -> notifyAll()!!");
 
+        }
+    }
+
+    public synchronized void leave() {
+        // System.out.println(Thread.currentThread().getName() + " -> take()!!");
+
+        notifyAll();
     }
 
     private void waiting() {
