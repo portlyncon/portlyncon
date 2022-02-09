@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ConsumidorProducto",
+            "request": "launch",
+            "mainClass": "zoo.animal.care/curs_java.ecercicis.ejemploConcurrencia.demo.src.main.java.com.concurrencia.ConsumidorProducto",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
             "name": "Launch ejercicio2",
             "request": "launch",
             "mainClass": "zoo.animal.care/curs_java.ecercicis.ejemploConcurrencia.demo.src.main.java.com.concurrencia.ejercicio2",
