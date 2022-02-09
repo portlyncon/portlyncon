@@ -1,4 +1,4 @@
-package curs_java.ecercicis.ejemploConcurrencia.demo.src.main.java.com.concurrencia.filosofos;
+package curs_java.filosofos;
 
 import java.util.ArrayList;
 
