@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SerializeTest",
+            "request": "launch",
+            "mainClass": "zoo.animal.care/curs_java.ecercicis.IO.practica2.test.SerializeTest",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
+            "name": "Launch FileScanInteractive",
+            "request": "launch",
+            "mainClass": "zoo.animal.care/curs_java.ecercicis.IO.practica1.FileScanInteractive",
+            "projectName": "portlyncon_880d0794"
+        },
+        {
+            "type": "java",
             "name": "Launch LocalDatesAndTimes",
             "request": "launch",
             "mainClass": "zoo.animal.feeding/curs_java.ecercicis.JavaDateTime.LocalDatesAndTimes",
